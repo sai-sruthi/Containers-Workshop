@@ -8,7 +8,7 @@
 
 Describe your discussion for defining idempotency.  What examples did you use for idempotent and not idempotent operations?
 
-<img src="resources_imgs/Discussion.png">
+<img src="resource_imgs/Discussion.png">
 
 I joined the us-east-1 channel at 2:00 pm on Tuesday(02/16/2021) and discussed about the above topics. 
 
