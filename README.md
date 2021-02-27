@@ -84,17 +84,21 @@ Examples of Not Idempotent Operations:
 
 7. Compare and contrast living infrastructure from immutable infrastructure.
 
+    The contrast in living infrastruture and immutable infrastructure is in living infrastruture where an instance stays alive and we keep updating it, and in immutable infrastructure it is erased and recreated everytime. 
 
 8. Explain the difference between provisioning and configuration management.
 
+    The difference between provisioning and configuration is that in provision is what gets up the machine. Either kickstarting a machine, or virt install, or using an API to launch a cloud vm.
+    Whereas configuration management is what happens right afterwards. In fact, the last thing a provisioning tool does is launching the configuration management tool.
 
 9. What impact does configuring a server to listen on 0.0.0.0 have? Why might this be a problem?
 
-
+    It works in browsers but it's bad practice and looks unprofessional. 
+    The problem that the port the server listens on has no effect on cookies at all. 0.0.0.0 is used to instruct the server to listen on all available IP addresses but users still connect to a particular port on a particular concrete IP address, and cookies are generated using those values.
 
 10. What is an interesting thing you learned about research in configuration management?
 
-
+    The interesting thing in configuration management is its helpfullness in team collaborations, with continous deployement and integration. The state being maintained for each feature with no overlap and merge conflicts. 
 
 ## Answer the following questions about the CM workshop 
 
