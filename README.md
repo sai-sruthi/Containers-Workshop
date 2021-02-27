@@ -125,16 +125,28 @@ Examples of Not Idempotent Operations:
 
 5. What are some reasons why it is useful to have a configuration server.
 
-    
+   The reasons it is useful is it provides a centralized server for delivering external configuration properties to an application and a central source for managing this configuration across deployment environments 
 
 ## Part 3
 
 1. What is your understanding of the `yaml` format?
 
+    `yaml` is a human readable data serializable language better than JSON or XML. It is commonly used for configuration files and in applications where data is being stored or transmitted. 
+
 2. What is the difference between a *module* and *task* in ansible?
+
+    A module is a reusable, standalone script that Ansible runs on your behalf, either locally or remotely. Modules interact with your local machine, an API, or a remote system to perform specific tasks like changing a database password or spinning up a cloud instance.
+    Whereas each task executes a module with specific arguments. When a task has executed on all target machines, Ansible moves on to the next task. You can use strategies to change this default behavior. Within each play, Ansible applies the same task directives to all hosts.
 
 3. What are situations where you might use *variables* and *templates* in ansible?
 
+    Ansible provides variables as a way to avoid hard-coding configuration values inside ansible tasks.
+    Templates are powerful ways to setup basic configuration settings without hard coding values. When I use a template, it will get the template, fill in any parameters, and then copy the file over to the destination, hence it can be useful for setting up complex configuration files such as apache, mysql, or jenkins.
+
 4. What are some operators that enable idempotence in ansible tasks?
 
+    By default, most ansible modules are written to be idempotent. For example, if one of the tasks is to create a directory on the server, then the directory will be created if and only if it does not already exist. This sounds pretty simple to implement in the case of filesystem operations, but it’s not as trivial when considering more complex modules. Nonetheless, Ansible guarantees idempotence in all of its core modules.
+
 5. Why are roles useful for organizing ansible playbooks?
+
+    Roles allow for you to essentially “include” in other playbooks. Its basically another level of abstraction used to organize playbooks. They provide a skeleton for an independent and reusable collection of variables, tasks, templates, files, and modules which can be automatically loaded into the playbook.
