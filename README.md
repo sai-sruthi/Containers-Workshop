@@ -102,16 +102,30 @@ Examples of Not Idempotent Operations:
 
 ## Answer the following questions about the CM workshop 
 
-1. How did you create a connection between between the configuration server and web server?
+1. How did you create a connection between the configuration server and web server?
+
+    To create a connection between the configuration server and web server we created a pair of public/private keys for authentication through ssh.
+    In our case, the public key will be used to authorize the private key for connections to the web-srv. The private key will be stored in the config-server. It can then be used, for example, to make a ssh connection to the web-srv.
 
 2. Did you have any problems getting this setup?
 
+    <img src="resource_imgs/file_not_protected.png">
+
+    The problem on the private key file was the visibility, in order to overcome, reduced who can read or access this file. 
+    
 3. Why does the permission of the private key need to be changed?
+
+    The file was visible to all servers, and hence its accessibility was to be changed. 
 
 4. If ssh can be used to execute remote commands, why not just use bash commands for CM?
 
+    While being able to run ad-hoc commands and scripts provides a useful capability, there are several constraints that make this impractical.
+
+    Writing bash scripts can be error-prone. Most commands are not idempotent, meaning they may cause errors or unexpected behaviors if run multiple times on the same servers. Finally, configuration of servers is an inherently noisy problem, due to network issues and random service and hardware failures. This means, you often need to resume a configuration operation after experiencing partial failure.
+
 5. What are some reasons why it is useful to have a configuration server.
 
+    
 
 ## Part 3
 
