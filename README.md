@@ -55,32 +55,45 @@ Examples of Not Idempotent Operations:
 
     * Inventory, configuration scripts  etc. 
 
-    ---------------------------------------------------------------------------------
 
+3. How does modern tooling and software development processes change configuration management for the better?
+    
     * Source control already makes easy to identify software components and manage changes 
 
     * Variations can be enabled with branches and feature flags 
 
     * Better code review practices + CI/CD pipelines can enable quality control and traceability between requirements and code in production 
 
-
-3. How does modern tooling and software development processes change configuration management for the better?
-
-
-
 4. What are some reasons why dependencies might be difficult to configure for a computing environment?
+
+    * Executable gists are not present, so naive algorithm to enable executable gists 
+
+    * Name Mismatch, transitive dependency, version constraints etc. 
 
 5. Why is idempotency useful for configuration scripts?
 
+    System is able to reach a state regardless of its current state, so in case of missing any information, such idempotent scripts make sure we can get back to the required state. 
+     
 6. Explain the difference between pull and push configuration models.
+
+    * Push configuration model is easier to manage wheras pull is more complex. 
+
+    * ASSET is managed centrally in push configuration models and in case of pull configuration models it can register itself. 
+
+    * There is less enforcemen of state in case of Push configuration models and in case of pull configuration models there is better ensurance assets stay in sync with config (agent enforces state).
 
 7. Compare and contrast living infrastructure from immutable infrastructure.
 
+
 8. Explain the difference between provisioning and configuration management.
+
 
 9. What impact does configuring a server to listen on 0.0.0.0 have? Why might this be a problem?
 
+
+
 10. What is an interesting thing you learned about research in configuration management?
+
 
 
 ## Answer the following questions about the CM workshop 
