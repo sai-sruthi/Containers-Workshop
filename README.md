@@ -1,6 +1,6 @@
-# HW2-DevOps
+# Conatiner Workshop
 
-**Unity Id:** stallur2
+Solution for: https://github.com/CSC-DevOps/Course/blob/master/HW/HW2-cm.md
 
 **Name:** Sruthi Talluri 
 
